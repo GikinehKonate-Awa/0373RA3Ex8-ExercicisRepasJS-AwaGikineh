@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+        .dark { background: black; color: white; }
+    </style>
+</head>
+<body>
+    <button id="btn" onclick="toggleMode()">Activar Mode Fosc</button>
+    <p>Contingut de la pàgina...</p>
+
+    <script>
+        function toggleMode() {
+            document.body.classList.toggle('dark');
+            const btn = document.getElementById('btn');
+            
+            //Mirar si l'element conté un classe segons el nom d'aquesta:
+            let hasDarkClass = document.getElementById('btn').classList.contains('dark'); //Variable Booleana!
+
+            //Canviem el text del butó en funció del mode.
+            if(hasDarkClass){
+                btn.innerText = "Mode Clar";
+            }else{
+                btn.innerText = "Mode Fosc";
+            }
+            
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Colors</title>
+</head>
+<body>
+    <div id="formaDirecta">
+        <h1>Forma directa</h1>
+        <!-- forma directa: inserint codi a l'event-->
+        <button onclick="document.body.style.backgroundColor = 'red'">Vermell</button>
+        <button onclick="document.body.style.backgroundColor = 'blue'">Blau</button>
+        <button onclick="document.body.style.backgroundColor = 'green'">Verd</button>
+    </div>
+    
+    <div id="formaInDirecta">
+        <h1>Forma indirecta</h1>
+        <!-- forma indirecta: cridem a la funció i li pasem un string amb el color que volem-->
+        <button onclick="changeColor('red')">Vermell</button>
+        <button onclick="changeColor('blue')">Blau</button>
+        <button onclick="changeColor('green')">Verd</button>
+    </div>
+    <script>
+        function changeColor(colour){
+            document.body.style.backgroundColor = colour;
+        }
+    </script>
+</body>
+</html>

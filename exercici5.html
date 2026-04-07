@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Tasques</title>
+</head>
+<body>
+    <input type="text" id="tasca" placeholder="Nova tasca...">
+    <button onclick="afegir()">Afegir</button>
+    <ul id="llista"></ul>
+
+    <script>
+        function afegir() {
+            const input = document.getElementById('tasca');
+            if (input.value !== "") {
+                const li = document.createElement('li');
+                li.innerText = input.value;
+                document.getElementById('llista').appendChild(li);
+                input.value = "";
+            }
+        }
+    </script>
+</body>
+</html>

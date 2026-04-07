@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Imatge</title>
+</head>
+<body>
+    <img id="foto" src="https://picsum.photos/id/10/200/200" width="200"><br>
+    <button onclick="canviar()">Canviar Imatge</button>
+
+    <script>
+        //Amb algo més sencill es pot fer. En aquest cas he volgut fer un toggle.
+        const imgSrc1 = "https://picsum.photos/id/10/200/200";
+        const imgSrc2 = "https://picsum.photos/id/20/200/200";
+        function canviar() {
+            let imgElement = document.getElementById('foto'); 
+            let imgSrc = imgElement.src;
+            if(imgSrc == imgSrc1){
+                let imgSrc = imgElement.src = imgSrc2;
+            }else{
+                let imgSrc = imgElement.src = imgSrc1;
+            }
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Salutació</title>
+</head>
+<body>
+    <input type="text" id="nom" placeholder="Escriu el teu nom">
+    <button onclick="saludar()">Saluda</button>
+    <p id="missatge"></p>
+
+    <script>
+        function saludar() {
+            const nom = document.getElementById('nom').value;
+            document.getElementById('missatge').innerText = `Hola, ${nom}, benvingut/da!`;
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Comptador</title>
+</head>
+<body>
+    <h1 id="valor">0</h1>
+    <button onclick="canviar(1)">Incrementar</button>
+    <button onclick="canviar(-1)">Decrementar</button>
+
+    <script>
+        let comptador = 0;
+        function canviar(n) {
+            comptador += n;
+            document.getElementById('valor').innerText = comptador;
+        }
+    </script>
+</body>
+</html>

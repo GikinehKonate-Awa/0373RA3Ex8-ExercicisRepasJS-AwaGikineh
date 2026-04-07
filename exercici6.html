@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Validador</title>
+</head>
+<body>
+    <input type="number" id="edat" placeholder="La teva edat">
+    <button onclick="validar()">Enviar</button>
+    <p id="resultat"></p>
+
+    <script>
+        function validar() {
+            const edat = document.getElementById('edat').value;
+            const res = document.getElementById('resultat');
+            if (edat < 18) {
+                res.innerText = "Ets menor d'edat";
+                res.style.color = "red";
+            } else {
+                res.innerText = "Accés permès";
+                res.style.color = "green";
+            }
+        }
+    </script>
+</body>
+</html>

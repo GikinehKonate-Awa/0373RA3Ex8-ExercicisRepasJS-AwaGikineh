@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Estil Realtime</title>
+</head>
+<body>
+    <input type="text" id="input" oninput="actualitzar()">
+    <p id="text">Escriu alguna cosa...</p>
+
+    <script>
+        function actualitzar() {
+            const input = document.getElementById('input');
+            const p = document.getElementById('text');
+            p.innerText = input.value;
+            p.style.fontSize = (16 + input.value.length) + "px";
+            //Igual si fiqueu un random entre els total de valors que admet el format RGB.
+            p.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
+
+            /*Un altre forma de fer aquest random és calculant un random de cada valor de color
+            * Per exemple: Cada color va del 0 a 255 -> Math.int(Math.random()*256.toString(16))
+            */
+        }
+    </script>
+</body>
+</html>
