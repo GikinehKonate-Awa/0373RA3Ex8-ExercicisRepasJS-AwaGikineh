@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex 10</title>
+</head>
+<body>
+
+    <button id="boto" onclick="toggleMode()">Activar mode fosc</button>
+    <p>Aquest és el contingut de la pàgina.</p>
+
+    <script>
+        // Variable que recorda si el mode fosc està activat o no
+        let modefosc = false;
+
+        function toggleMode() {
+            if (modefosc === false) {
+                // Posem el fons negre i el text blanc
+                document.body.style.backgroundColor = "black";
+                document.body.style.color = "white";
+                document.getElementById("boto").textContent = "Activar mode clar";
+                modefosc = true;
+            } else {
+                // Tornem al fons blanc i el text negre
+                document.body.style.backgroundColor = "white";
+                document.body.style.color = "black";
+                document.getElementById("boto").textContent = "Activar mode fosc";
+                modefosc = false;
+            }
+        }
+    </script>
+
+</body>
+</html>

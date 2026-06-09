@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex 11</title>
+</head>
+<body>
+
+    <button onclick="afegirElement()">Afegir element</button>
+    <ul id="llista"></ul>
+
+    <script>
+        // Comptador que recorda quants elements hem afegit
+        let comptador = 0;
+
+        function afegirElement() {
+            // Cada vegada que es prem el botó, sumem 1 al comptador
+            comptador++;
+            
+            // Creem un nou element de llista
+            const li = document.createElement("li");
+            
+            // El text inclou el número de posició
+            li.textContent = "Element número " + comptador;
+            
+            // Afegim l'element a la llista
+            document.getElementById("llista").appendChild(li);
+        }
+    </script>
+
+</body>
+</html>

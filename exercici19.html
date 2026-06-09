@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex 19</title>
+    <style>
+        .cercle {
+            width: 60px;
+            height: 60px;
+            border-radius: 50%;
+            background-color: grey;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Els tres cercles del semàfor, tots comencen en gris (apagats) -->
+    <div id="vermell" class="cercle"></div>
+    <div id="groc" class="cercle"></div>
+    <div id="verd" class="cercle"></div>
+    <button onclick="canviar()">Canviar</button>
+
+    <script>
+        // Variable que recorda en quin pas del semàfor estem (0, 1 o 2)
+        let pas = 0;
+
+        function canviar() {
+            // Primer apaguem tots els cercles posant-los grisos
+            document.getElementById("vermell").style.backgroundColor = "grey";
+            document.getElementById("groc").style.backgroundColor = "grey";
+            document.getElementById("verd").style.backgroundColor = "grey";
+
+            // Encenent només el cercle que toca segons el pas actual
+            if (pas === 0) document.getElementById("vermell").style.backgroundColor = "red";
+            if (pas === 1) document.getElementById("groc").style.backgroundColor = "orange";
+            if (pas === 2) document.getElementById("verd").style.backgroundColor = "green";
+
+            // Avancem al pas següent
+            pas++;
+            
+            // Si hem passat del 2, tornem a començar des del 0
+            if (pas > 2) pas = 0;
+        }
+    </script>
+
+</body>
+</html>
