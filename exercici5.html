@@ -1,23 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tasques</title>
+    <title>Ex 5</title>
 </head>
 <body>
-    <input type="text" id="tasca" placeholder="Nova tasca...">
+
+    <input type="text" id="tasca" placeholder="Nova tasca">
     <button onclick="afegir()">Afegir</button>
+    <!-- Llista buida on anirem afegint elements -->
     <ul id="llista"></ul>
 
     <script>
         function afegir() {
-            const input = document.getElementById('tasca');
-            if (input.value !== "") {
-                const li = document.createElement('li');
-                li.innerText = input.value;
-                document.getElementById('llista').appendChild(li);
-                input.value = "";
-            }
+         // Llegim el text que ha escrit l'usuari
+            const valor = document.getElementById("tasca").value;
+         // Creem un element de llista nou 
+            const li = document.createElement("li");
+         // Posem el text dins del nou element
+            li.textContent = valor;
+         // Afegim el nou element a la llista 
+            document.getElementById("llista").appendChild(li);
+         // Buidem la caixa de text per a la propera tasca
+            document.getElementById("tasca").value = "";
         }
     </script>
+
 </body>
 </html>

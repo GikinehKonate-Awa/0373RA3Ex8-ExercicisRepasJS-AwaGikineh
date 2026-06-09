@@ -1,25 +1,37 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Imatge</title>
+    <title>Ex 7</title>
 </head>
 <body>
-    <img id="foto" src="https://picsum.photos/id/10/200/200" width="200"><br>
-    <button onclick="canviar()">Canviar Imatge</button>
+
+    <!-- Imatge que canviarà quan es premi el botó -->
+    <img id="imatge" src="https://picsum.photos/seed/a/200/150">
+    <br>
+    <button onclick="canviarImatge()">Canviar imatge</button>
 
     <script>
-        //Amb algo més sencill es pot fer. En aquest cas he volgut fer un toggle.
-        const imgSrc1 = "https://picsum.photos/id/10/200/200";
-        const imgSrc2 = "https://picsum.photos/id/20/200/200";
-        function canviar() {
-            let imgElement = document.getElementById('foto'); 
-            let imgSrc = imgElement.src;
-            if(imgSrc == imgSrc1){
-                let imgSrc = imgElement.src = imgSrc2;
-            }else{
-                let imgSrc = imgElement.src = imgSrc1;
-            }
+        // Llista amb les adreces de les tres imatges
+        const imatges = [
+            "https://picsum.photos/seed/a/200/150",
+            "https://picsum.photos/seed/b/200/150",
+            "https://picsum.photos/seed/c/200/150"
+        ];
+        
+        // Guardem en quina imatge estem ara mateix
+        let index = 0;
+
+        function canviarImatge() {
+            // Passem a la següent imatge
+            index++;
+            
+            // Si hem arribat al final de la llista, tornem a la primera
+            if (index >= imatges.length) index = 0;
+            
+            // Canviem l'adreça de la imatge per mostrar la nova
+            document.getElementById("imatge").src = imatges[index];
         }
     </script>
+
 </body>
 </html>

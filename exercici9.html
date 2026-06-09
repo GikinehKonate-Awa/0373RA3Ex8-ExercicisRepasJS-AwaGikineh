@@ -1,25 +1,30 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Estil Realtime</title>
+    <title>Ex 9</title>
 </head>
 <body>
-    <input type="text" id="input" oninput="actualitzar()">
-    <p id="text">Escriu alguna cosa...</p>
+
+    <!-- oninput vol dir que la funció s'executa cada vegada que s'escriu una lletra -->
+    <input type="text" id="entrada" placeholder="Escriu aquí..." oninput="actualitzar()">
+    <p id="resultat">El text apareixerà aquí</p>
 
     <script>
         function actualitzar() {
-            const input = document.getElementById('input');
-            const p = document.getElementById('text');
-            p.innerText = input.value;
-            p.style.fontSize = (16 + input.value.length) + "px";
-            //Igual si fiqueu un random entre els total de valors que admet el format RGB.
-            p.style.color = '#' + Math.floor(Math.random()*16777215).toString(16);
+            // Llegim el text que hi ha a la caixa en aquest moment
+            const text = document.getElementById("entrada").value;
+            const p = document.getElementById("resultat");
 
-            /*Un altre forma de fer aquest random és calculant un random de cada valor de color
-            * Per exemple: Cada color va del 0 a 255 -> Math.int(Math.random()*256.toString(16))
-            */
+            // Mostrem el text al paràgraf
+            p.textContent = text;
+            
+            // Com més caràcters hi ha, més gran es fa la lletra
+            p.style.fontSize = (14 + text.length) + "px";
+            
+            // Generem un número aleatori entre 0 i 360 per tenir un color diferent cada vegada
+            p.style.color = "hsl(" + Math.floor(Math.random() * 360) + ", 60%, 40%)";
         }
     </script>
+
 </body>
 </html>

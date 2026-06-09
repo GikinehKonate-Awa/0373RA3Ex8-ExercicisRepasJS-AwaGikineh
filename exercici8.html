@@ -1,18 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Tecles</title>
+    <title>Ex 8</title>
 </head>
 <body>
-    <h1>Prem una tecla:</h1>
-    <div id="tecla" style="font-size: 2rem; font-weight: bold;"></div>
+
+    <!-- Aquí es mostrarà la tecla que l'usuari ha premut -->
+    <h1 id="tecla">Prem una tecla...</h1>
 
     <script>
-        //Aquest exercici és PREMIUM. Ja que per saber les tecles apretades, l'event l'hem de fer al objecte window.
-        //window fa referencia a TOTA la finestra del explorador.
-        window.addEventListener('keydown', (e) => {
-            document.getElementById('tecla').innerText = `Has premut: ${e.key}`;
+        // Escoltem quan l'usuari prem qualsevol tecla del teclat
+        document.addEventListener("keydown", function(event) {
+        // event.key conté el nom de la tecla premuda
+            document.getElementById("tecla").textContent = event.key;
         });
     </script>
+
 </body>
 </html>

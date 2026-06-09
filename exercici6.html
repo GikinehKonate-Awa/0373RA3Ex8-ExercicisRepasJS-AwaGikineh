@@ -1,25 +1,32 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Validador</title>
+    <title>Ex 6</title>
 </head>
 <body>
-    <input type="number" id="edat" placeholder="La teva edat">
+
+    <input type="number" id="edat" placeholder="Edat">
     <button onclick="validar()">Enviar</button>
-    <p id="resultat"></p>
+    
+    <!-- Aquí apareixerà el missatge en vermell o verd -->
+    <p id="missatge"></p>
 
     <script>
         function validar() {
-            const edat = document.getElementById('edat').value;
-            const res = document.getElementById('resultat');
+            // Llegim l'edat que ha escrit l'usuari
+            const edat = document.getElementById("edat").value;
+            const missatge = document.getElementById("missatge");
+
+            // Comprovem si l'edat és menor o major de 18
             if (edat < 18) {
-                res.innerText = "Ets menor d'edat";
-                res.style.color = "red";
+                missatge.textContent = "Ets menor d'edat";
+                missatge.style.color = "red";
             } else {
-                res.innerText = "Accés permès";
-                res.style.color = "green";
+                missatge.textContent = "Accés permès";
+                missatge.style.color = "green";
             }
         }
     </script>
+
 </body>
 </html>

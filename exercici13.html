@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex 13</title>
+</head>
+<body>
+
+    <!-- Menú desplegable amb les tres fonts disponibles -->
+    <select id="fonts" onchange="canviarFonts()">
+        <option>Arial</option>
+        <option>Courier New</option>
+        <option>Times New Roman</option>
+    </select>
+
+    <!-- Text on es veurà el canvi de font -->
+    <div id="mostra">
+        Aquest es un text de mostra per veure el canvi de font.
+    </div>
+
+    <script>
+        function canviarFonts() {
+            // Llegim quina opció ha escollit l'usuari al menú
+            const fontSeleccionada = document.getElementById("fonts").value;
+            
+            // Apliquem la font escollida al text de mostra
+            document.getElementById("mostra").style.fontFamily = fontSeleccionada;
+        }
+    </script>
+
+</body>
+</html>

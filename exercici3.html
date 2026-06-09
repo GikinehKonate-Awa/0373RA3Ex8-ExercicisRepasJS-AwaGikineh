@@ -1,19 +1,29 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Comptador</title>
+    <title>Ex 3</title>
 </head>
 <body>
-    <h1 id="valor">0</h1>
-    <button onclick="canviar(1)">Incrementar</button>
-    <button onclick="canviar(-1)">Decrementar</button>
+ <!-- Aquí es veurà el número actual -->
+    <p id="numero">0</p>
+    <button onclick="incrementar()">Incrementar</button>
+    <button onclick="decrementar()">Decrementar</button>
 
     <script>
-        let comptador = 0;
-        function canviar(n) {
-            comptador += n;
-            document.getElementById('valor').innerText = comptador;
+      // Variable que guarda el número actual, comença en 0
+        let numero = 0;
+
+        function incrementar() {
+    // Sumem 1 al número i actualitzem el que es veu a la pantalla
+            numero++;
+            document.getElementById("numero").textContent = numero;
+        }
+     // Restem 1 al número i actualitzem el que es veu a la pantalla
+        function decrementar() {
+            numero--;
+            document.getElementById("numero").textContent = numero;
         }
     </script>
+
 </body>
 </html>

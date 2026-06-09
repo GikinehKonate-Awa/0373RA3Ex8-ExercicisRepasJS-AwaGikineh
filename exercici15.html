@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex 15</title>
+</head>
+<body>
+
+    <!-- oninput fa que la funció s'executi cada vegada que s'escriu una lletra -->
+    <textarea id="area" rows="4" cols="40" oninput="comptar()"></textarea>
+    <p id="comptador">Caràcters: 0</p>
+
+    <script>
+        function comptar() {
+            // Llegim tot el text que hi ha dins del camp de text
+            const text = document.getElementById("area").value;
+            
+            // .length ens dona el nombre de caràcters que té el text
+            document.getElementById("comptador").textContent = "Caràcters: " + text.length;
+        }
+    </script>
+
+</body>
+</html>

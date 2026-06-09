@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex 17</title>
+    <style>
+        td { border: 1px solid black; padding: 8px; }
+        table { border-collapse: collapse; margin-top: 10px; }
+    </style>
+</head>
+<body>
+
+    <input type="number" id="files" placeholder="Files">
+    <input type="number" id="columnes" placeholder="Columnes">
+    <button onclick="generarTaula()">Generar</button>
+
+    <!-- Taula buida que s'omplirà amb JavaScript -->
+    <table id="taula"></table>
+
+    <script>
+        function generarTaula() {
+            // Llegim el nombre de files i columnes que vol l'usuari
+            const files = document.getElementById("files").value;
+            const columnes = document.getElementById("columnes").value;
+            const taula = document.getElementById("taula");
+
+            // Buidem la taula per si ja hi havia dades d'abans
+            taula.innerHTML = "";
+
+            // Repetim tantes vegades com files hem de crear
+            for (let i = 0; i < files; i++) {
+                const fila = taula.insertRow();
+                
+                // Dins de cada fila, creem tantes cel·les com columnes
+                for (let j = 0; j < columnes; j++) {
+                    const cel = fila.insertCell();
+                    cel.textContent = (i + 1) + "," + (j + 1);
+                }
+            }
+        }
+    </script>
+
+</body>
+</html>

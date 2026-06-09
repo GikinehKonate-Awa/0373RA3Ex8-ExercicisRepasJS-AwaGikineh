@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex 12</title>
+</head>
+<body>
+
+    <p id="text" style="font-size: 16px;">Text de prova per canviar la mida.</p>
+    <button onclick="augmentar()">+</button>
+    <button onclick="disminuir()">-</button>
+
+    <script>
+        // Guardem la mida actual de la lletra en una variable
+        let mida = 16;
+
+        function augmentar() {
+            // Sumem 2 a la mida i apliquem el canvi al paràgraf
+            mida += 2;
+            document.getElementById("text").style.fontSize = mida + "px";
+        }
+
+        function disminuir() {
+            // Restem 2 a la mida i apliquem el canvi al paràgraf
+            mida -= 2;
+            document.getElementById("text").style.fontSize = mida + "px";
+        }
+    </script>
+
+</body>
+</html>

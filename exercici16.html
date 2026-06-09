@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex 16</title>
+</head>
+<body>
+
+    <!-- Imatge de la bombeta, comença apagada -->
+    <img id="bombeta" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Light_bulb_icon_off.svg/200px-Light_bulb_icon_off.svg.png" width="100">
+    <br>
+    <button id="boto" onclick="toggleLlum()">Encendre</button>
+
+    <script>
+        // Variable que recorda si la bombeta està encesa o apagada
+        let encesa = false;
+
+        function toggleLlum() {
+            if (encesa === false) {
+                // Canviem la imatge per la de la bombeta encesa
+                document.getElementById("bombeta").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/b/b8/Light_bulb_icon.svg/200px-Light_bulb_icon.svg.png";
+                document.getElementById("boto").textContent = "Apagar";
+                encesa = true;
+            } else {
+                // Canviem la imatge per la de la bombeta apagada
+                document.getElementById("bombeta").src = "https://upload.wikimedia.org/wikipedia/commons/thumb/6/60/Light_bulb_icon_off.svg/200px-Light_bulb_icon_off.svg.png";
+                document.getElementById("boto").textContent = "Encendre";
+                encesa = false;
+            }
+        }
+    </script>
+
+</body>
+</html>

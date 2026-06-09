@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Ex 14</title>
+</head>
+<body>
+
+    <!-- onmouseenter s'activa quan el ratolí entra al quadrat -->
+    <!-- onmouseleave s'activa quan el ratolí surt del quadrat -->
+    <div id="quadrat"
+        style="width: 200px; height: 200px; background-color: blue;"
+        onmouseenter="entrar()"
+        onmouseleave="sortir()">
+    </div>
+
+    <script>
+        function entrar() {
+            // Canviem el color quan el ratolí és a sobre
+            document.getElementById("quadrat").style.backgroundColor = "orange";
+        }
+
+        function sortir() {
+            // Tornem al color original quan el ratolí surt
+            document.getElementById("quadrat").style.backgroundColor = "blue";
+        }
+    </script>
+
+</body>
+</html>

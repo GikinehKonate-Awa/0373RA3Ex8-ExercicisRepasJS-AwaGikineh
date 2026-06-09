@@ -1,24 +1,28 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Toggle</title>
+    <title>Ex 4</title>
 </head>
 <body>
-    <button id="btn" onclick="toggle()">Amagar</button>
-    <p id="text">Aquest és un text que apareix i desapareix.</p>
+
+    <button id="boto" onclick="toggle()">Amagar</button>
+    <p id="text">Aquest és el text que pots amagar.</p>
 
     <script>
         function toggle() {
-            const p = document.getElementById('text');
-            const btn = document.getElementById('btn');
-            if (p.style.display === "none") {
-                p.style.display = "block";
-                btn.innerText = "Amagar";
+            const text = document.getElementById("text");
+            const boto = document.getElementById("boto");
+// Comprovem si el text està amagat o visible
+            if (text.style.display === "none") {
+                text.style.display = "";
+                boto.textContent = "Amagar";
+ // Si estava visible, l'amaga
             } else {
-                p.style.display = "none";
-                btn.innerText = "Mostrar";
+                text.style.display = "none";
+                boto.textContent = "Mostrar";
             }
         }
     </script>
+
 </body>
 </html>

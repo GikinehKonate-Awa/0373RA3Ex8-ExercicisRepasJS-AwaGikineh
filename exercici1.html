@@ -1,18 +1,24 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Salutació</title>
+    <title>Ex 1</title>
 </head>
 <body>
-    <input type="text" id="nom" placeholder="Escriu el teu nom">
-    <button onclick="saludar()">Saluda</button>
-    <p id="missatge"></p>
+<!-- Caixa on l'usuari escriu el seu nom -->
+    <input type="text" id="nom" placeholder="El teu nom">
+<!-- Botó que quan es prem crida la funció saludar -->
+    <button onclick="saludar()">Saludar</button>
+ <!-- Paràgraf buit on apareixerà el missatge -->
+    <p id="resultat"></p>
 
     <script>
         function saludar() {
-            const nom = document.getElementById('nom').value;
-            document.getElementById('missatge').innerText = `Hola, ${nom}, benvingut/da!`;
+    // Agafem el text que ha escrit l'usuari a la caixa
+            const nom = document.getElementById("nom").value;
+    // Posem el missatge dins del paràgraf ajuntant textos
+            document.getElementById("resultat").textContent = "Hola, " + nom + ", benvingut/da!";
         }
     </script>
+
 </body>
 </html>
